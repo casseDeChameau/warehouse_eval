@@ -3,3 +3,298 @@
     width: 100%;
     background: url('/img/warehouse-img/hero_1.jpg') center/cover;
 }
+
+.section-wrapper {
+    margin: 0px 10vw;
+    display: flex;
+    flex-flow: column nowrap;
+    .title {
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: $vert;
+            margin-bottom: 0;
+        }
+        &.ltitle {
+            text-align: left;
+        }
+    }
+    .blocs-wrapper {
+        display: flex;
+        justify-content: center;
+        .bloc-content {
+            width: 30%;
+            margin: 1rem;
+            .picture-content {
+                img {
+                    width: 100%;
+                }
+            }
+            .text-content {
+                text-align: left;
+            }
+        }
+        &.bw-houses {
+            .bloc-content {
+                position: relative;
+                margin: 3rem;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #000;
+                    top: 3%;
+                    left: 5%;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                .text-content {
+                    margin-left: 0;
+                    h3 {
+                        font-weight: 300;
+                        font-size: 1.5rem;
+                    }
+                    p {
+                        color: grey;
+                        font-family: $raleway;
+                        font-weight: 600;
+                        font-size: 1.15rem;
+                    }
+                }
+                transition: all .3s ease-in-out;
+                &:hover {
+                    &:before {
+                        visibility: visible;
+                        opacity: 1;
+                        left: 5%;
+                        transition: all .3s ease-in-out;
+                    }
+                    .text-content {
+                        margin-left: 15%;
+                        transition: all .3s ease-in-out;
+                        h3 {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        &.bw-agents {
+            .bloc-content {
+                background-color: $vert;
+                margin: 2rem;
+                .picture-content {}
+                .text-content {
+                    padding: 1rem;
+                    h3 {
+                        font-weight: 300;
+                        margin: 0;
+                    }
+                    p {
+                        margin: 1rem 0 0;
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        &.bw-how {
+            align-items: center;
+            .linebloc {
+                border-top: 1px solid #000;
+                width: 8rem;
+            }
+            .bloc-content {
+                width: 20%;
+                .picture-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    p {
+                        margin: 0;
+                        font-size: 1.2rem;
+                    }
+                    .fas {
+                        font-size: 3rem;
+                    }
+                }
+                .text-content {
+                    text-align: center;
+                    h3 {
+                        font-weight: 300;
+                        font-size: 1.5rem;
+                    }
+                    p {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        &.bw-news {
+            padding-bottom: 3rem;
+            ;
+            .bloc-content {
+                margin: 2rem;
+                .text-content {
+                    h3 {
+                        font-weight: 300;
+                        font-size: 1.3rem;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        color: $vert;
+                        span {
+                            color: gray;
+                            &:after {
+                                content: '•';
+                                padding: 0 .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.bw-contacts {
+            &>div {
+                background-color: #fff;
+                padding: 3rem;
+                margin: 3rem;
+                font-family: $raleway;
+                h3 {
+                    font-family: $oswald;
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                }
+                &.form {
+                    text-align: left;
+                    width: 50%;
+                    form {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        .field {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            padding: 1rem 0;
+                            label {
+                                padding-bottom: 1rem;
+                                font-weight: 500;
+                                font-size: 1.2rem;
+                            }
+                            input {
+                                border: 1px solid lightgrey;
+                                height: 3rem;
+                                border-radius: 5px;
+                                &[type="textarea"] {
+                                    height: 15rem;
+                                    &::placeholder {
+                                        top: 0;
+                                        font-weight: 600;
+                                        color: rgb(150, 150, 150);
+                                    }
+                                }
+                            }
+                        }
+                        .names {
+                            display: flex;
+                            justify-content: space-between;
+                            .field {
+                                width: 40%;
+                            }
+                        }
+                        .submit-btn {
+                            background-color: $vert;
+                            border-radius: 5px;
+                            padding: 1.3rem 3rem;
+                            width: 14rem;
+                            color: #fff;
+                            border: none;
+                            outline: none;
+                            font-weight: 600;
+                        }
+                    }
+                }
+                &.bloc-content {
+                    height: 100%;
+                    .text-content {
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        color: rgb(100, 100, 100);
+                        h4 {
+                            color: rgb(50, 50, 50);
+                            font-weight: 700;
+                            font-size: 1.2rem;
+                        }
+                        span {
+                            color: $vert;
+                        }
+                    }
+                }
+            }
+        }
+        &.bw-footer {
+            margin: 100px 20%;
+            display: block;
+            color: grey;
+            font-size: 1.2rem;
+            .top-footer {
+                margin-bottom: 5rem;
+                .bloc-content {
+                    width: 30%;
+                }
+                display: flex;
+                justify-content: space-between;
+                h3 {
+                    color: #fff;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                }
+                p {
+                    line-height: 2rem;
+                }
+                i {
+                    color: grey;
+                    margin-right: 3rem;
+                    ;
+                }
+            }
+            .bottom-footer {
+                border-top: 1px solid grey;
+                a {
+                    color: lightgrey;
+                    text-decoration: none;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}
+
+.how {
+    padding: 4rem;
+    background-color: $vert;
+    .title {
+        h2 {
+            color: #000;
+            margin: 3rem;
+        }
+    }
+}
+
+.contacts {
+    background-color: bisque;
+    .title {
+        h2 {
+            margin: 5rem 0 2rem;
+        }
+    }
+}
+
+.footer {
+    background-color: rgb(50, 50, 50);
+    .section-wrapper {
+        margin: 0;
+    }
+}

@@ -2,6 +2,7 @@
     position: fixed;
     width: 100vw;
     // height: 50px;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +31,9 @@
                 }
             }
         }
+    }
+    .burger {
+        display: none;
     }
     color: #fff;
     transition: all .1s ease-in-out;
