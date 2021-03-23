@@ -37,7 +37,9 @@ gulp.task('moulinette-html', function() {
 gulp.task('moulinette-js', function() {
     return pipeline(
         gulp.src('./src/js/*.js'),
-        babel({ presets: ['@babel/env'] }),
+        babel({
+            presets: ['@babel/env']
+        }),
         uglify(),
         rename({
             extname: ".min.js"
@@ -66,7 +68,7 @@ gulp.task('browser-sync', function() {
 // gulp image
 // with compressing options
 gulp.task('compress-img', function() {
-    gulp.src('./src/img/*')
+    gulp.src('./src/img/**')
         .pipe(image({
             pngquant: true,
             optipng: true,
