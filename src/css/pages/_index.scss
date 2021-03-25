@@ -4,6 +4,30 @@
     background: url('/img/warehouse-img/hero_1.jpg') center/cover;
 }
 
+.totop-btn {
+    width: 5vmin;
+    height: 5vmin;
+    background-color: $vert;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    color: #fff;
+    @media screen and (max-width: 900px) {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    z-index: 2;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .section-wrapper {
     margin: 0px 10vw;
     display: flex;
@@ -22,9 +46,18 @@
     }
     .blocs-wrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
         .bloc-content {
             width: 30%;
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
             margin: 1rem;
             .picture-content {
                 img {
@@ -109,6 +142,9 @@
             }
             .bloc-content {
                 width: 20%;
+                @media screen and (max-width: 900px) {
+                    width: 100%;
+                }
                 .picture-content {
                     display: flex;
                     justify-content: center;
@@ -171,6 +207,9 @@
                 &.form {
                     text-align: left;
                     width: 50%;
+                    @media screen and (max-width: 900px) {
+                        width: 100%;
+                    }
                     form {
                         display: flex;
                         flex-flow: column nowrap;
@@ -200,8 +239,14 @@
                         .names {
                             display: flex;
                             justify-content: space-between;
+                            @media screen and (max-width: 900px) {
+                                flex-flow: column nowrap;
+                            }
                             .field {
                                 width: 40%;
+                                @media screen and (max-width: 900px) {
+                                    width: 100%;
+                                }
                             }
                         }
                         .submit-btn {
@@ -243,8 +288,14 @@
                 margin-bottom: 5rem;
                 .bloc-content {
                     width: 30%;
+                    @media screen and (max-width: 900px) {
+                        width: 100%;
+                    }
                 }
                 display: flex;
+                @media screen and (max-width: 900px) {
+                    flex-flow: column nowrap;
+                }
                 justify-content: space-between;
                 h3 {
                     color: #fff;
@@ -254,10 +305,12 @@
                 p {
                     line-height: 2rem;
                 }
-                i {
-                    color: grey;
-                    margin-right: 3rem;
-                    ;
+                .social-icon {
+                    display: flex;
+                    justify-content: space-between;
+                    a {
+                        color: grey;
+                    }
                 }
             }
             .bottom-footer {
@@ -298,3 +351,13 @@
         margin: 0;
     }
 }
+
+
+/* 
+todo: 
+- ajouter le slider
+- ajouter le bouton toTop
+- changer valeurs par variables (font size) pour modifs en responsive
+- adapter flex au responsive
+- single pages 
+*/

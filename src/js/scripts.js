@@ -4,10 +4,10 @@ window.addEventListener('scroll', () => {
     console.log(scrollY);
     if (currentScroll > 200) {
         nav.classList.add('on-scroll');
-        $('.nav-main-links a').css('color', '#000').css('opacity', '1');
+        $('.nav-main-links a').css('color', '#000').add('on-scroll');
         console.log($('.nav-main-links'));
     } else {
         nav.classList.remove('on-scroll');
-        $('.nav-main-links a').css('color', '#fff').css('opacity', '.5');
+        $('.nav-main-links a').css('color', '#fff').remove('on-scroll');
     }
 });
