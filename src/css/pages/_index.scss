@@ -1,40 +1,10 @@
-.header {
-    height: 100vh;
-    width: 100%;
-    background: url('/img/warehouse-img/hero_1.jpg') center/cover;
-}
-
-.totop-btn {
-    width: 5vmin;
-    height: 5vmin;
-    background-color: $vert;
-    position: fixed;
-    bottom: 3rem;
-    right: 3rem;
-    color: #fff;
-    @media screen and (max-width: 900px) {
-        bottom: 1rem;
-        right: 1rem;
-    }
-    z-index: 2;
-    a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        color: #fff;
-        width: 100%;
-        height: 100%;
-    }
-}
-
 .section-wrapper {
-    margin: 0px 10vw;
+    margin: 0 10vw;
     display: flex;
     flex-flow: column nowrap;
     .title {
         h2 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 300;
             text-transform: uppercase;
             color: $vert;
@@ -71,7 +41,8 @@
         &.bw-houses {
             .bloc-content {
                 position: relative;
-                margin: 3rem;
+                width: 25%;
+                margin: 2rem;
                 &:before {
                     content: '';
                     position: absolute;
@@ -118,8 +89,18 @@
         &.bw-agents {
             .bloc-content {
                 background-color: $vert;
-                margin: 2rem;
-                .picture-content {}
+                margin: 1rem;
+                margin-bottom: 100px;
+                .picture-content {
+                    overflow: hidden;
+                    transition: all .3s ease-in-out;
+                    &:hover {
+                        img {
+                            transition: all .4s ease-in-out;
+                            transform: scale(1.05);
+                        }
+                    }
+                }
                 .text-content {
                     padding: 1rem;
                     h3 {
@@ -170,10 +151,8 @@
             }
         }
         &.bw-news {
-            padding-bottom: 3rem;
-            ;
             .bloc-content {
-                margin: 2rem;
+                margin: 2rem 1rem 100px;
                 .text-content {
                     h3 {
                         font-weight: 300;
@@ -201,7 +180,7 @@
                 font-family: $raleway;
                 h3 {
                     font-family: $oswald;
-                    font-size: 1.8rem;
+                    font-size: 1.5rem;
                     font-weight: 300;
                 }
                 &.form {
@@ -220,106 +199,103 @@
                             label {
                                 padding-bottom: 1rem;
                                 font-weight: 500;
-                                font-size: 1.2rem;
+                                font-size: 1rem;
                             }
-                            input {
+                            input,
+                            textarea {
                                 border: 1px solid lightgrey;
                                 height: 3rem;
                                 border-radius: 5px;
-                                &[type="textarea"] {
-                                    height: 15rem;
-                                    &::placeholder {
-                                        top: 0;
-                                        font-weight: 600;
-                                        color: rgb(150, 150, 150);
-                                    }
-                                }
                             }
-                        }
-                        .names {
-                            display: flex;
-                            justify-content: space-between;
-                            @media screen and (max-width: 900px) {
-                                flex-flow: column nowrap;
+                            textarea {
+                                height: 12rem;
+                                padding: .8rem;
+                                font-weight: 600;
                             }
-                            .field {
-                                width: 40%;
-                                @media screen and (max-width: 900px) {
-                                    width: 100%;
-                                }
-                            }
-                        }
-                        .submit-btn {
-                            background-color: $vert;
-                            border-radius: 5px;
-                            padding: 1.3rem 3rem;
-                            width: 14rem;
-                            color: #fff;
-                            border: none;
-                            outline: none;
-                            font-weight: 600;
                         }
                     }
+                    .names {
+                        display: flex;
+                        justify-content: space-between;
+                        @media screen and (max-width: 900px) {
+                            flex-flow: column nowrap;
+                        }
+                        .field {
+                            width: 40%;
+                            @media screen and (max-width: 900px) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .submit-btn {
+                        background-color: $vert;
+                        border-radius: 5px;
+                        padding: 1.3rem 3rem;
+                        width: 14rem;
+                        color: #fff;
+                        border: none;
+                        outline: none;
+                        font-weight: 600;
+                    }
                 }
-                &.bloc-content {
-                    height: 100%;
-                    .text-content {
-                        font-size: 1.2rem;
-                        font-weight: 400;
-                        color: rgb(100, 100, 100);
-                        h4 {
-                            color: rgb(50, 50, 50);
-                            font-weight: 700;
-                            font-size: 1.2rem;
-                        }
-                        span {
-                            color: $vert;
-                        }
+            }
+            &.bloc-content {
+                height: 100%;
+                .text-content {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: rgb(100, 100, 100);
+                    h4 {
+                        color: rgb(50, 50, 50);
+                        font-weight: 700;
+                    }
+                    span {
+                        color: $vert;
                     }
                 }
             }
         }
-        &.bw-footer {
-            margin: 100px 20%;
-            display: block;
-            color: grey;
-            font-size: 1.2rem;
-            .top-footer {
-                margin-bottom: 5rem;
-                .bloc-content {
-                    width: 30%;
-                    @media screen and (max-width: 900px) {
-                        width: 100%;
-                    }
-                }
-                display: flex;
+    }
+    &.bw-footer {
+        margin: 100px 20%;
+        display: block;
+        color: grey;
+        font-size: 1.2rem;
+        .top-footer {
+            margin-bottom: 5rem;
+            .bloc-content {
+                width: 30%;
                 @media screen and (max-width: 900px) {
-                    flex-flow: column nowrap;
-                }
-                justify-content: space-between;
-                h3 {
-                    color: #fff;
-                    font-size: 1.5rem;
-                    font-weight: 300;
-                }
-                p {
-                    line-height: 2rem;
-                }
-                .social-icon {
-                    display: flex;
-                    justify-content: space-between;
-                    a {
-                        color: grey;
-                    }
+                    width: 100%;
                 }
             }
-            .bottom-footer {
-                border-top: 1px solid grey;
+            display: flex;
+            @media screen and (max-width: 900px) {
+                flex-flow: column nowrap;
+            }
+            justify-content: space-between;
+            h3 {
+                color: #fff;
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+            p {
+                line-height: 2rem;
+            }
+            .social-icon {
+                display: flex;
+                justify-content: space-between;
                 a {
-                    color: lightgrey;
-                    text-decoration: none;
-                    font-weight: 200;
+                    color: grey;
                 }
+            }
+        }
+        .bottom-footer {
+            border-top: 1px solid grey;
+            a {
+                color: lightgrey;
+                text-decoration: none;
+                font-weight: 200;
             }
         }
     }
@@ -337,7 +313,7 @@
 }
 
 .contacts {
-    background-color: bisque;
+    background-color: antiquewhite;
     .title {
         h2 {
             margin: 5rem 0 2rem;
@@ -355,9 +331,5 @@
 
 /* 
 todo: 
-- ajouter le slider
-- ajouter le bouton toTop
-- changer valeurs par variables (font size) pour modifs en responsive
-- adapter flex au responsive
 - single pages 
 */

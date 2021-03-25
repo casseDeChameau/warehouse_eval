@@ -1,17 +1,18 @@
 .nav-main {
     position: fixed;
     width: 100vw;
-    // height: 50px;
-    z-index: 1;
+    height: 75px;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 22rem;
+    padding: 1rem 19%;
     border-bottom: 1px solid rgba(255, 255, 255, .5);
     .nav-main-logo {
         h1 {
             margin: 0;
             font-weight: 300;
+            font-size: 1.8rem;
         }
     }
     .nav-main-links {
@@ -22,7 +23,7 @@
                 list-style: none;
                 a {
                     text-decoration: none;
-                    font-size: 1.3rem;
+                    font-size: 1.2rem;
                     color: #fff;
                     opacity: .5;
                     &:hover {
@@ -36,12 +37,13 @@
         display: none;
     }
     color: #fff;
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
     background-color: rgba(255, 255, 255, 0);
 }
 
 .on-scroll {
     color: #000;
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
     background-color: rgba(255, 255, 255, 1);
+    height: 60px;
 }
