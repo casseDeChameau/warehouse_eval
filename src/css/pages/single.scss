@@ -1,0 +1,94 @@
+.header-single {
+    height: 100vh;
+    background: url('../img/warehouse-img/hero_1.jpg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .header-content {
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        h1 {
+            font-weight: 300;
+            font-size: 3rem;
+        }
+        span {
+            font-family: $raleway;
+            font-weight: 200;
+            font-size: 1.7rem;
+            a {
+                color: #fff;
+            }
+        }
+    }
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-color: #000;
+        opacity: .4;
+    }
+}
+
+.section-wrapper {
+    .bw-single {
+        width: 100%;
+        @media screen and (max-width: 900px) {
+            align-items: flex-start;
+        }
+        .bc-single {
+            font-family: $raleway;
+            align-items: flex-start;
+            text-align: left;
+            p {
+                letter-spacing: .05rem;
+                color: grey;
+                font-size: .9rem;
+                line-height: 1.4rem;
+            }
+            &:nth-of-type(1) {
+                width: 750px;
+                max-width: 90%;
+                p {
+                    letter-spacing: .05rem;
+                    color: grey;
+                    font-size: .9rem;
+                }
+                h3 {
+                    font-size: 1.3rem;
+                    font-weight: 100;
+                }
+                a {
+                    color: $vert;
+                    text-decoration: none;
+                }
+            }
+            &:nth-of-type(2) {
+                width: 350px;
+                max-width: 90%;
+                padding: 1rem;
+                h3 {
+                    font-family: $oswald;
+                    color: grey;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    margin: 0 0 20px;
+                    margin: 1rem 0;
+                }
+                .author-pic {
+                    width: 100%;
+                    margin: 2rem 0 0;
+                    img {
+                        width: 100%;
+                    }
+                }
+                input {
+                    width: 100%;
+                    height: 2.5rem;
+                }
+            }
+        }
+    }
+}

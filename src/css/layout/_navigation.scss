@@ -1,7 +1,7 @@
 .nav-main {
     position: fixed;
     width: 100vw;
-    height: 75px;
+    height: 12vh;
     z-index: 2;
     display: flex;
     justify-content: space-between;
@@ -13,6 +13,7 @@
             margin: 0;
             font-weight: 300;
             font-size: 1.8rem;
+            cursor: pointer;
         }
     }
     .nav-main-links {
@@ -29,12 +30,45 @@
                     &:hover {
                         opacity: 1;
                     }
+                    &.on-scroll {
+                        color: #000;
+                    }
                 }
             }
         }
     }
-    .burger {
-        display: none;
+    @media screen and (max-width: 1200px) {
+        margin: 0;
+        .nav-main-links {
+            ul {
+                transform: translateX(300px);
+                transition: all .5s ease-in-out;
+                &.toggle-class {
+                    transition: all .5s ease-in-out;
+                    transform: translateX(0px);
+                }
+                position: absolute;
+                height: 100vh;
+                width: 300px;
+                top: -1rem;
+                right: 0;
+                padding: 100px 10px;
+                background-color: #fff;
+                flex-flow: column nowrap;
+                align-items: flex-start;
+                li {
+                    a {
+                        color: black;
+                        text-transform: lowercase;
+                        font-family: $raleway;
+                        font-weight: 600;
+                        opacity: 1;
+                        font-size: 1.35rem;
+                    }
+                    margin-bottom: 2rem;
+                }
+            }
+        }
     }
     color: #fff;
     transition: all .2s ease-in-out;
@@ -45,5 +79,6 @@
     color: #000;
     transition: all .2s ease-in-out;
     background-color: rgba(255, 255, 255, 1);
-    height: 60px;
+    height: 10vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1s);
 }

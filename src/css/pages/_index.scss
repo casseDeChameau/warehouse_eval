@@ -43,6 +43,7 @@
                 position: relative;
                 width: 25%;
                 margin: 2rem;
+                cursor: pointer;
                 &:before {
                     content: '';
                     position: absolute;
@@ -153,14 +154,16 @@
         &.bw-news {
             .bloc-content {
                 margin: 2rem 1rem 100px;
+                cursor: pointer;
                 .text-content {
                     h3 {
                         font-weight: 300;
-                        font-size: 1.3rem;
+                        font-size: 1rem;
                         text-transform: uppercase;
                     }
                     p {
-                        color: $vert;
+                        line-height: 1.2rem;
+                        font-size: 0.8rem;
                         span {
                             color: gray;
                             &:after {
@@ -168,14 +171,16 @@
                                 padding: 0 .8rem;
                             }
                         }
+                        a {
+                            color: $vert;
+                            text-decoration: none;
+                        }
                     }
                 }
             }
         }
         &.bw-contacts {
             &>div {
-                background-color: #fff;
-                padding: 3rem;
                 margin: 3rem;
                 font-family: $raleway;
                 h3 {
@@ -184,6 +189,8 @@
                     font-weight: 300;
                 }
                 &.form {
+                    background-color: #fff;
+                    padding: 3rem;
                     text-align: left;
                     width: 50%;
                     @media screen and (max-width: 900px) {
@@ -213,6 +220,9 @@
                                 font-weight: 600;
                             }
                         }
+                        button {
+                            width: 14rem;
+                        }
                     }
                     .names {
                         display: flex;
@@ -227,74 +237,23 @@
                             }
                         }
                     }
-                    .submit-btn {
-                        background-color: $vert;
-                        border-radius: 5px;
-                        padding: 1.3rem 3rem;
-                        width: 14rem;
-                        color: #fff;
-                        border: none;
-                        outline: none;
-                        font-weight: 600;
+                }
+                &.bloc-content {
+                    height: 100%;
+                    background-color: #fff;
+                    padding: 0 1rem;
+                    .text-content {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        color: rgb(100, 100, 100);
+                        h4 {
+                            color: rgb(50, 50, 50);
+                            font-weight: 700;
+                        }
+                        span {
+                            color: $vert;
+                        }
                     }
-                }
-            }
-            &.bloc-content {
-                height: 100%;
-                .text-content {
-                    font-size: 1rem;
-                    font-weight: 400;
-                    color: rgb(100, 100, 100);
-                    h4 {
-                        color: rgb(50, 50, 50);
-                        font-weight: 700;
-                    }
-                    span {
-                        color: $vert;
-                    }
-                }
-            }
-        }
-        &.bw-footer {
-            margin: 100px 20%;
-            display: block;
-            color: grey;
-            font-size: 1.2rem;
-            .top-footer {
-                margin-bottom: 5rem;
-                .bloc-content {
-                    width: 30%;
-                    @media screen and (max-width: 900px) {
-                        width: 100%;
-                    }
-                }
-                display: flex;
-                @media screen and (max-width: 900px) {
-                    flex-flow: column nowrap;
-                }
-                justify-content: space-between;
-                h3 {
-                    color: #fff;
-                    font-size: 1.5rem;
-                    font-weight: 300;
-                }
-                p {
-                    line-height: 2rem;
-                }
-                .social-icon {
-                    display: flex;
-                    justify-content: space-between;
-                    a {
-                        color: grey;
-                    }
-                }
-            }
-            .bottom-footer {
-                border-top: 1px solid grey;
-                a {
-                    color: lightgrey;
-                    text-decoration: none;
-                    font-weight: 200;
                 }
             }
         }
@@ -313,23 +272,10 @@
 }
 
 .contacts {
-    background-color: antiquewhite;
+    background-color: #FAFAFA;
     .title {
         h2 {
             margin: 5rem 0 2rem;
         }
     }
 }
-
-.footer {
-    background-color: rgb(50, 50, 50);
-    .section-wrapper {
-        margin: 0;
-    }
-}
-
-
-/* 
-todo: 
-- single pages 
-*/

@@ -34,24 +34,12 @@
                     font-weight: 400;
                     margin: 3rem 0;
                 }
-                .swiper-btn {
-                    background-color: $vert;
-                    border-radius: 5px;
-                    outline: none;
-                    border-style: none;
-                    color: #fff;
-                    padding: 1rem 3rem;
-                    cursor: pointer;
-                    &:hover {
-                        background-color: #000;
-                    }
-                }
             }
             &.swsl1 {
-                background: url('../img/warehouse-img/hero_1.jpg');
+                background: url('../img/warehouse-img/hero_1.jpg') center/cover;
             }
             &.swsl2 {
-                background: url('../img/warehouse-img/hero_2.jpg');
+                background: url('../img/warehouse-img/hero_2.jpg') center/cover;
             }
             &:after {
                 content: '';
@@ -59,21 +47,21 @@
                 height: 100%;
                 position: absolute;
                 background-color: #000;
-                opacity: .5;
+                opacity: .4;
             }
         }
     }
-}
-
-.swiper-pagination {
-    margin-bottom: 100px;
-    .swiper-pagination-bullet {
-        width: 15px;
-        height: 15px;
-        border: 2px solid lightgrey;
-        &.swiper-pagination-bullet-active {
-            background: $vert;
-            border: none;
+    .swiper-pagination {
+        margin-bottom: 100px;
+        .swiper-pagination-bullet {
+            width: 15px;
+            height: 15px;
+            border: 2px solid lightgrey;
+            &.swiper-pagination-bullet-active {
+                background: $vert;
+                border: none;
+            }
         }
     }
+    &.property-swiper {}
 }
