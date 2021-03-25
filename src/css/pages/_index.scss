@@ -255,47 +255,47 @@
                 }
             }
         }
-    }
-    &.bw-footer {
-        margin: 100px 20%;
-        display: block;
-        color: grey;
-        font-size: 1.2rem;
-        .top-footer {
-            margin-bottom: 5rem;
-            .bloc-content {
-                width: 30%;
-                @media screen and (max-width: 900px) {
-                    width: 100%;
+        &.bw-footer {
+            margin: 100px 20%;
+            display: block;
+            color: grey;
+            font-size: 1.2rem;
+            .top-footer {
+                margin-bottom: 5rem;
+                .bloc-content {
+                    width: 30%;
+                    @media screen and (max-width: 900px) {
+                        width: 100%;
+                    }
                 }
-            }
-            display: flex;
-            @media screen and (max-width: 900px) {
-                flex-flow: column nowrap;
-            }
-            justify-content: space-between;
-            h3 {
-                color: #fff;
-                font-size: 1.5rem;
-                font-weight: 300;
-            }
-            p {
-                line-height: 2rem;
-            }
-            .social-icon {
                 display: flex;
+                @media screen and (max-width: 900px) {
+                    flex-flow: column nowrap;
+                }
                 justify-content: space-between;
-                a {
-                    color: grey;
+                h3 {
+                    color: #fff;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                }
+                p {
+                    line-height: 2rem;
+                }
+                .social-icon {
+                    display: flex;
+                    justify-content: space-between;
+                    a {
+                        color: grey;
+                    }
                 }
             }
-        }
-        .bottom-footer {
-            border-top: 1px solid grey;
-            a {
-                color: lightgrey;
-                text-decoration: none;
-                font-weight: 200;
+            .bottom-footer {
+                border-top: 1px solid grey;
+                a {
+                    color: lightgrey;
+                    text-decoration: none;
+                    font-weight: 200;
+                }
             }
         }
     }
